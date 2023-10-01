@@ -20,12 +20,22 @@ import javax.swing.JLayeredPane;
 import java.awt.CardLayout;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
+import java.awt.BorderLayout;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.ScrollPaneConstants;
+import javax.swing.JRadioButton;
+import javax.swing.LayoutStyle.ComponentPlacement;
+import java.awt.Label;
 
 public class MainProject extends JFrame {
 	
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField textField;
+	private JTextField textField_1;
+	private JTextField textField_2;
+	private JTextField textField_3;
 	
 	public JPanel getContentPane() {
 	    return contentPane;
@@ -137,10 +147,701 @@ public class MainProject extends JFrame {
 		contentPane.add(layeredPane);
 		layeredPane.setLayout(new CardLayout(0, 0));
 		
+		JPanel ClubInfo = new RoundPanel();
+		ClubInfo.setBackground(new Color(255, 255, 255));
+		layeredPane.add(ClubInfo, "name_363395450215900");
+		ClubInfo.setLayout(new BorderLayout(0, 0));
+		
+		JScrollPane scrollPane_1 = new JScrollPane();
+		scrollPane_1.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+		ClubInfo.add(scrollPane_1);
+		
+		RoundPanel ClubInfo_1 = new RoundPanel();
+		ClubInfo_1.setBorder(null);
+		ClubInfo_1.setBackground(Color.WHITE);
+		scrollPane_1.setViewportView(ClubInfo_1);
+		
+		ClubLogo btnNewButton_3_0_1 = new ClubLogo("New button");
+		btnNewButton_3_0_1.setText("");
+		btnNewButton_3_0_1.setFont(new Font("Cambria", Font.BOLD, 17));
+		btnNewButton_3_0_1.setBorder(null);
+		btnNewButton_3_0_1.setBackground(new Color(17, 20, 137));
+		
+		RoundPanel panel_descr = new RoundPanel();
+		panel_descr.setLayout(null);
+		panel_descr.setBackground(new Color(17, 20, 137));
+		
+		JLabel lblClubName_1_1 = new JLabel(" Description of the Club");
+		lblClubName_1_1.setIconTextGap(10);
+		lblClubName_1_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblClubName_1_1.setForeground(Color.WHITE);
+		lblClubName_1_1.setFont(new Font("Cambria", Font.PLAIN, 25));
+		lblClubName_1_1.setBounds(10, 10, 935, 205);
+		panel_descr.add(lblClubName_1_1);
+		
+		SmallPanel eventhead = new SmallPanel();
+		eventhead.setLayout(null);
+		eventhead.setBackground(new Color(17, 20, 137));
+		
+		JLabel lblEventsOrganisedRecently = new JLabel("Events organised by the club recently");
+		lblEventsOrganisedRecently.setHorizontalAlignment(SwingConstants.CENTER);
+		lblEventsOrganisedRecently.setForeground(Color.WHITE);
+		lblEventsOrganisedRecently.setFont(new Font("Cambria", Font.PLAIN, 25));
+		lblEventsOrganisedRecently.setBounds(10, 10, 539, 37);
+		eventhead.add(lblEventsOrganisedRecently);
+		
+		SmallPanel eventhead_1_1_1 = new SmallPanel();
+		eventhead_1_1_1.setLayout(null);
+		eventhead_1_1_1.setBackground(Color.LIGHT_GRAY);
+		
+		JLabel lblClubName_1_1_1 = new JLabel("Search for Other Clubs");
+		lblClubName_1_1_1.setIconTextGap(10);
+		lblClubName_1_1_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblClubName_1_1_1.setForeground(Color.WHITE);
+		lblClubName_1_1_1.setFont(new Font("Cambria", Font.PLAIN, 25));
+		lblClubName_1_1_1.setBounds(562, -63, 390, 116);
+		eventhead_1_1_1.add(lblClubName_1_1_1);
+		
+		JLabel lblEvent = new JLabel("List of Events");
+		lblEvent.setHorizontalAlignment(SwingConstants.CENTER);
+		lblEvent.setForeground(Color.WHITE);
+		lblEvent.setFont(new Font("Cambria", Font.PLAIN, 25));
+		lblEvent.setBounds(0, 31, 549, 230);
+		eventhead_1_1_1.add(lblEvent);
+		
+		SmallPanel eventhead_1 = new SmallPanel();
+		eventhead_1.setLayout(null);
+		eventhead_1.setBackground(new Color(17, 20, 137));
+		
+		JLabel lblNewLabel_8 = new JLabel("Search for Other Clubs");
+		lblNewLabel_8.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_8.setForeground(Color.WHITE);
+		lblNewLabel_8.setFont(new Font("Cambria", Font.PLAIN, 25));
+		lblNewLabel_8.setBounds(10, 42, 374, 37);
+		eventhead_1.add(lblNewLabel_8);
+		
+		SmallPanel eventhead_1_1 = new SmallPanel();
+		eventhead_1_1.setLayout(null);
+		eventhead_1_1.setBackground(new Color(17, 20, 137));
+		
+		JLabel lblAchievementsAndAccolades = new JLabel("Achievements and Accolades");
+		lblAchievementsAndAccolades.setHorizontalAlignment(SwingConstants.CENTER);
+		lblAchievementsAndAccolades.setForeground(Color.WHITE);
+		lblAchievementsAndAccolades.setFont(new Font("Cambria", Font.PLAIN, 25));
+		lblAchievementsAndAccolades.setBounds(10, 39, 374, 37);
+		eventhead_1_1.add(lblAchievementsAndAccolades);
+		GroupLayout gl_ClubInfo_1 = new GroupLayout(ClubInfo_1);
+		gl_ClubInfo_1.setHorizontalGroup(
+			gl_ClubInfo_1.createParallelGroup(Alignment.LEADING)
+				.addGap(0, 996, Short.MAX_VALUE)
+				.addGroup(gl_ClubInfo_1.createSequentialGroup()
+					.addGroup(gl_ClubInfo_1.createParallelGroup(Alignment.LEADING)
+						.addGroup(gl_ClubInfo_1.createSequentialGroup()
+							.addGap(408)
+							.addComponent(btnNewButton_3_0_1, GroupLayout.PREFERRED_SIZE, 200, GroupLayout.PREFERRED_SIZE))
+						.addGroup(gl_ClubInfo_1.createSequentialGroup()
+							.addGap(10)
+							.addComponent(panel_descr, GroupLayout.PREFERRED_SIZE, 965, GroupLayout.PREFERRED_SIZE))
+						.addGroup(gl_ClubInfo_1.createSequentialGroup()
+							.addGap(10)
+							.addGroup(gl_ClubInfo_1.createParallelGroup(Alignment.LEADING)
+								.addComponent(eventhead, GroupLayout.PREFERRED_SIZE, 559, GroupLayout.PREFERRED_SIZE)
+								.addGroup(gl_ClubInfo_1.createSequentialGroup()
+									.addGap(10)
+									.addComponent(eventhead_1_1_1, GroupLayout.PREFERRED_SIZE, 549, GroupLayout.PREFERRED_SIZE)))
+							.addGap(12)
+							.addGroup(gl_ClubInfo_1.createParallelGroup(Alignment.LEADING)
+								.addComponent(eventhead_1, GroupLayout.PREFERRED_SIZE, 394, GroupLayout.PREFERRED_SIZE)
+								.addComponent(eventhead_1_1, GroupLayout.PREFERRED_SIZE, 394, GroupLayout.PREFERRED_SIZE))))
+					.addGap(21))
+		);
+		gl_ClubInfo_1.setVerticalGroup(
+			gl_ClubInfo_1.createParallelGroup(Alignment.LEADING)
+				.addGap(0, 904, Short.MAX_VALUE)
+				.addGroup(gl_ClubInfo_1.createSequentialGroup()
+					.addGap(10)
+					.addComponent(btnNewButton_3_0_1, GroupLayout.PREFERRED_SIZE, 200, GroupLayout.PREFERRED_SIZE)
+					.addGap(4)
+					.addComponent(panel_descr, GroupLayout.PREFERRED_SIZE, 227, GroupLayout.PREFERRED_SIZE)
+					.addGap(73)
+					.addGroup(gl_ClubInfo_1.createParallelGroup(Alignment.LEADING)
+						.addComponent(eventhead, GroupLayout.PREFERRED_SIZE, 65, GroupLayout.PREFERRED_SIZE)
+						.addGroup(gl_ClubInfo_1.createSequentialGroup()
+							.addGap(63)
+							.addComponent(eventhead_1_1_1, GroupLayout.PREFERRED_SIZE, 271, GroupLayout.PREFERRED_SIZE))
+						.addGroup(gl_ClubInfo_1.createSequentialGroup()
+							.addComponent(eventhead_1, GroupLayout.PREFERRED_SIZE, 115, GroupLayout.PREFERRED_SIZE)
+							.addGap(10)
+							.addComponent(eventhead_1_1, GroupLayout.PREFERRED_SIZE, 115, GroupLayout.PREFERRED_SIZE))))
+		);
+		ClubInfo_1.setLayout(gl_ClubInfo_1);
+		
 		RoundPanel Announcem = new RoundPanel();
-		Announcem.setLayout(null);
+		Announcem.setForeground(Color.WHITE);
 		Announcem.setBackground(Color.CYAN);
 		layeredPane.add(Announcem, "name_363207062992400");
+		Announcem.setLayout(new BorderLayout(0, 0));
+		
+		JScrollPane scrollPane_2 = new JScrollPane();
+		scrollPane_2.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+		Announcem.add(scrollPane_2);
+		
+		RoundPanel Announcem_1 = new RoundPanel();
+		Announcem_1.setBorder(null);
+		Announcem_1.setBackground(Color.WHITE);
+		scrollPane_2.setViewportView(Announcem_1);
+		
+		SmallPanel A1 = new SmallPanel();
+		A1.setLayout(null);
+		A1.setBackground(new Color(217, 217, 217));
+		
+		SmallPanel A1_2_1 = new SmallPanel();
+		A1_2_1.setLayout(null);
+		A1_2_1.setForeground(Color.WHITE);
+		A1_2_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		A1_2_1.setBackground(new Color(17, 20, 137));
+		A1_2_1.setAlignmentX(1.0f);
+		A1_2_1.setBounds(22, 13, 259, 210);
+		A1.add(A1_2_1);
+		
+		JLabel lblNewLabel_2 = new JLabel("Images");
+		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_2.setForeground(Color.WHITE);
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNewLabel_2.setBounds(0, 0, 259, 210);
+		A1_2_1.add(lblNewLabel_2);
+		
+		Label label_1_1_3 = new Label("Announcement 1");
+		label_1_1_3.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		label_1_1_3.setAlignment(Label.CENTER);
+		label_1_1_3.setBounds(306, 13, 598, 210);
+		A1.add(label_1_1_3);
+		
+		SmallPanel A1_1 = new SmallPanel();
+		A1_1.setLayout(null);
+		A1_1.setBackground(new Color(217, 217, 217));
+		
+		RoundPanel MemberInfo = new RoundPanel();
+		MemberInfo.setBorder(null);
+		MemberInfo.setBackground(Color.WHITE);
+		MemberInfo.setBounds(-26, -581, 1015, 1283);
+		A1_1.add(MemberInfo);
+		
+		RoundPanel panel_4_2_1_1 = new RoundPanel();
+		panel_4_2_1_1.setLayout(null);
+		panel_4_2_1_1.setForeground(Color.WHITE);
+		panel_4_2_1_1.setBackground(new Color(217, 217, 217));
+		
+		CircleButton2 btnNewButton_6_1_1 = new CircleButton2("");
+		btnNewButton_6_1_1.setText("");
+		btnNewButton_6_1_1.setSelected(true);
+		btnNewButton_6_1_1.setFocusPainted(false);
+		btnNewButton_6_1_1.setBorderPainted(false);
+		btnNewButton_6_1_1.setBorder(null);
+		btnNewButton_6_1_1.setBackground(UIManager.getColor("Button.background"));
+		btnNewButton_6_1_1.setBounds(23, 5, 23, 23);
+		panel_4_2_1_1.add(btnNewButton_6_1_1);
+		
+		textField_1 = new JTextField("Search by Name/Registration No.");
+		textField_1.setForeground(new Color(102, 102, 102));
+		textField_1.setFont(new Font("Calibri", Font.BOLD, 15));
+		textField_1.setColumns(10);
+		textField_1.setBorder(null);
+		textField_1.setBackground(new Color(217, 217, 217));
+		textField_1.setBounds(56, 5, 899, 23);
+		panel_4_2_1_1.add(textField_1);
+		
+		CircleButton2 btnNewButton_7_1_1 = new CircleButton2("");
+		btnNewButton_7_1_1.setText("");
+		btnNewButton_7_1_1.setSelected(true);
+		btnNewButton_7_1_1.setFocusPainted(false);
+		btnNewButton_7_1_1.setBorderPainted(false);
+		btnNewButton_7_1_1.setBorder(null);
+		btnNewButton_7_1_1.setBackground(UIManager.getColor("Button.background"));
+		btnNewButton_7_1_1.setBounds(954, 4, 23, 23);
+		panel_4_2_1_1.add(btnNewButton_7_1_1);
+		
+		SmallPanel A1_7 = new SmallPanel();
+		A1_7.setLayout(null);
+		A1_7.setBackground(new Color(217, 217, 217));
+		
+		SmallPanel A1_2_7 = new SmallPanel();
+		A1_2_7.setLayout(null);
+		A1_2_7.setBackground(new Color(17, 20, 137));
+		A1_2_7.setBounds(62, 8, 227, 40);
+		A1_7.add(A1_2_7);
+		
+		JLabel lblNewLabel_6 = new JLabel("Member Name");
+		lblNewLabel_6.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_6.setForeground(Color.WHITE);
+		lblNewLabel_6.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNewLabel_6.setBounds(10, 0, 195, 40);
+		A1_2_7.add(lblNewLabel_6);
+		
+		SmallPanel A1_2_1_7 = new SmallPanel();
+		A1_2_1_7.setLayout(null);
+		A1_2_1_7.setBackground(new Color(17, 20, 137));
+		A1_2_1_7.setBounds(554, 8, 207, 40);
+		A1_7.add(A1_2_1_7);
+		
+		JLabel lblRegistrationNo = new JLabel("Registration No.");
+		lblRegistrationNo.setHorizontalAlignment(SwingConstants.CENTER);
+		lblRegistrationNo.setForeground(Color.WHITE);
+		lblRegistrationNo.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblRegistrationNo.setBounds(10, 0, 195, 40);
+		A1_2_1_7.add(lblRegistrationNo);
+		
+		SmallPanel A1_2_1_1_6 = new SmallPanel();
+		A1_2_1_1_6.setLayout(null);
+		A1_2_1_1_6.setBackground(new Color(17, 20, 137));
+		A1_2_1_1_6.setBounds(765, 8, 175, 40);
+		A1_7.add(A1_2_1_1_6);
+		
+		JLabel lblRegistrationNo_1 = new JLabel("Time Table");
+		lblRegistrationNo_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblRegistrationNo_1.setForeground(Color.WHITE);
+		lblRegistrationNo_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblRegistrationNo_1.setBounds(0, 0, 175, 40);
+		A1_2_1_1_6.add(lblRegistrationNo_1);
+		
+		JLabel lblClubRole = new JLabel("Club Role");
+		lblClubRole.setHorizontalAlignment(SwingConstants.CENTER);
+		lblClubRole.setForeground(Color.DARK_GRAY);
+		lblClubRole.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblClubRole.setBounds(316, 8, 207, 40);
+		A1_7.add(lblClubRole);
+		
+		SmallPanel A1_1_2 = new SmallPanel();
+		A1_1_2.setLayout(null);
+		A1_1_2.setBackground(new Color(217, 217, 217));
+		
+		SmallPanel A1_2_2_2 = new SmallPanel();
+		A1_2_2_2.setLayout(null);
+		A1_2_2_2.setBackground(new Color(17, 20, 137));
+		A1_2_2_2.setBounds(62, 8, 227, 40);
+		A1_1_2.add(A1_2_2_2);
+		
+		JLabel lblNewLabel_1_4 = new JLabel("Member Name");
+		lblNewLabel_1_4.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_4.setForeground(Color.WHITE);
+		lblNewLabel_1_4.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNewLabel_1_4.setBounds(10, 0, 195, 40);
+		A1_2_2_2.add(lblNewLabel_1_4);
+		
+		SmallPanel A1_2_1_2_1 = new SmallPanel();
+		A1_2_1_2_1.setLayout(null);
+		A1_2_1_2_1.setBackground(new Color(17, 20, 137));
+		A1_2_1_2_1.setBounds(554, 8, 207, 40);
+		A1_1_2.add(A1_2_1_2_1);
+		
+		JLabel lblRegistrationNo_2 = new JLabel("Registration No.");
+		lblRegistrationNo_2.setHorizontalAlignment(SwingConstants.CENTER);
+		lblRegistrationNo_2.setForeground(Color.WHITE);
+		lblRegistrationNo_2.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblRegistrationNo_2.setBounds(10, 0, 195, 40);
+		A1_2_1_2_1.add(lblRegistrationNo_2);
+		
+		SmallPanel A1_2_1_1_1_2 = new SmallPanel();
+		A1_2_1_1_1_2.setLayout(null);
+		A1_2_1_1_1_2.setBackground(new Color(17, 20, 137));
+		A1_2_1_1_1_2.setBounds(765, 8, 175, 40);
+		A1_1_2.add(A1_2_1_1_1_2);
+		
+		JLabel lblRegistrationNo_1_1 = new JLabel("Time Table");
+		lblRegistrationNo_1_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblRegistrationNo_1_1.setForeground(Color.WHITE);
+		lblRegistrationNo_1_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblRegistrationNo_1_1.setBounds(0, 0, 175, 40);
+		A1_2_1_1_1_2.add(lblRegistrationNo_1_1);
+		
+		JLabel lblClubRole_1 = new JLabel("Club Role");
+		lblClubRole_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblClubRole_1.setForeground(Color.DARK_GRAY);
+		lblClubRole_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblClubRole_1.setBounds(316, 8, 207, 40);
+		A1_1_2.add(lblClubRole_1);
+		
+		SmallPanel A1_3_2 = new SmallPanel();
+		A1_3_2.setLayout(null);
+		A1_3_2.setBackground(new Color(217, 217, 217));
+		
+		SmallPanel A1_2_3 = new SmallPanel();
+		A1_2_3.setLayout(null);
+		A1_2_3.setBackground(new Color(17, 20, 137));
+		A1_2_3.setBounds(62, 8, 227, 40);
+		A1_3_2.add(A1_2_3);
+		
+		JLabel lblNewLabel_2_2 = new JLabel("Member Name");
+		lblNewLabel_2_2.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_2_2.setForeground(Color.WHITE);
+		lblNewLabel_2_2.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNewLabel_2_2.setBounds(10, 0, 195, 40);
+		A1_2_3.add(lblNewLabel_2_2);
+		
+		SmallPanel A1_2_1_3 = new SmallPanel();
+		A1_2_1_3.setLayout(null);
+		A1_2_1_3.setBackground(new Color(17, 20, 137));
+		A1_2_1_3.setBounds(554, 8, 207, 40);
+		A1_3_2.add(A1_2_1_3);
+		
+		JLabel lblRegistrationNo_3 = new JLabel("Registration No.");
+		lblRegistrationNo_3.setHorizontalAlignment(SwingConstants.CENTER);
+		lblRegistrationNo_3.setForeground(Color.WHITE);
+		lblRegistrationNo_3.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblRegistrationNo_3.setBounds(10, 0, 195, 40);
+		A1_2_1_3.add(lblRegistrationNo_3);
+		
+		SmallPanel A1_2_1_1_2 = new SmallPanel();
+		A1_2_1_1_2.setLayout(null);
+		A1_2_1_1_2.setBackground(new Color(17, 20, 137));
+		A1_2_1_1_2.setBounds(765, 8, 175, 40);
+		A1_3_2.add(A1_2_1_1_2);
+		
+		JLabel lblRegistrationNo_1_2 = new JLabel("Time Table");
+		lblRegistrationNo_1_2.setHorizontalAlignment(SwingConstants.CENTER);
+		lblRegistrationNo_1_2.setForeground(Color.WHITE);
+		lblRegistrationNo_1_2.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblRegistrationNo_1_2.setBounds(0, 0, 175, 40);
+		A1_2_1_1_2.add(lblRegistrationNo_1_2);
+		
+		JLabel lblClubRole_2 = new JLabel("Club Role");
+		lblClubRole_2.setHorizontalAlignment(SwingConstants.CENTER);
+		lblClubRole_2.setForeground(Color.DARK_GRAY);
+		lblClubRole_2.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblClubRole_2.setBounds(316, 8, 207, 40);
+		A1_3_2.add(lblClubRole_2);
+		
+		SmallPanel A1_4_2 = new SmallPanel();
+		A1_4_2.setLayout(null);
+		A1_4_2.setBackground(new Color(217, 217, 217));
+		
+		SmallPanel A1_2_4 = new SmallPanel();
+		A1_2_4.setLayout(null);
+		A1_2_4.setBackground(new Color(17, 20, 137));
+		A1_2_4.setBounds(62, 8, 227, 40);
+		A1_4_2.add(A1_2_4);
+		
+		JLabel lblNewLabel_3 = new JLabel("Member Name");
+		lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_3.setForeground(Color.WHITE);
+		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNewLabel_3.setBounds(10, 0, 195, 40);
+		A1_2_4.add(lblNewLabel_3);
+		
+		SmallPanel A1_2_1_4 = new SmallPanel();
+		A1_2_1_4.setLayout(null);
+		A1_2_1_4.setBackground(new Color(17, 20, 137));
+		A1_2_1_4.setBounds(554, 8, 207, 40);
+		A1_4_2.add(A1_2_1_4);
+		
+		JLabel lblRegistrationNo_4 = new JLabel("Registration No.");
+		lblRegistrationNo_4.setHorizontalAlignment(SwingConstants.CENTER);
+		lblRegistrationNo_4.setForeground(Color.WHITE);
+		lblRegistrationNo_4.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblRegistrationNo_4.setBounds(10, 0, 195, 40);
+		A1_2_1_4.add(lblRegistrationNo_4);
+		
+		SmallPanel A1_2_1_1_3 = new SmallPanel();
+		A1_2_1_1_3.setLayout(null);
+		A1_2_1_1_3.setBackground(new Color(17, 20, 137));
+		A1_2_1_1_3.setBounds(765, 8, 175, 40);
+		A1_4_2.add(A1_2_1_1_3);
+		
+		JLabel lblRegistrationNo_1_3 = new JLabel("Time Table");
+		lblRegistrationNo_1_3.setHorizontalAlignment(SwingConstants.CENTER);
+		lblRegistrationNo_1_3.setForeground(Color.WHITE);
+		lblRegistrationNo_1_3.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblRegistrationNo_1_3.setBounds(0, 0, 175, 40);
+		A1_2_1_1_3.add(lblRegistrationNo_1_3);
+		
+		JLabel lblClubRole_3 = new JLabel("Club Role");
+		lblClubRole_3.setHorizontalAlignment(SwingConstants.CENTER);
+		lblClubRole_3.setForeground(Color.DARK_GRAY);
+		lblClubRole_3.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblClubRole_3.setBounds(316, 8, 207, 40);
+		A1_4_2.add(lblClubRole_3);
+		
+		SmallPanel A1_5 = new SmallPanel();
+		A1_5.setLayout(null);
+		A1_5.setBackground(new Color(217, 217, 217));
+		
+		SmallPanel A1_2_5 = new SmallPanel();
+		A1_2_5.setLayout(null);
+		A1_2_5.setBackground(new Color(17, 20, 137));
+		A1_2_5.setBounds(62, 8, 227, 40);
+		A1_5.add(A1_2_5);
+		
+		JLabel lblNewLabel_4 = new JLabel("Member Name");
+		lblNewLabel_4.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_4.setForeground(Color.WHITE);
+		lblNewLabel_4.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNewLabel_4.setBounds(10, 0, 195, 40);
+		A1_2_5.add(lblNewLabel_4);
+		
+		SmallPanel A1_2_1_5 = new SmallPanel();
+		A1_2_1_5.setLayout(null);
+		A1_2_1_5.setBackground(new Color(17, 20, 137));
+		A1_2_1_5.setBounds(554, 8, 207, 40);
+		A1_5.add(A1_2_1_5);
+		
+		JLabel lblRegistrationNo_5 = new JLabel("Registration No.");
+		lblRegistrationNo_5.setHorizontalAlignment(SwingConstants.CENTER);
+		lblRegistrationNo_5.setForeground(Color.WHITE);
+		lblRegistrationNo_5.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblRegistrationNo_5.setBounds(10, 0, 195, 40);
+		A1_2_1_5.add(lblRegistrationNo_5);
+		
+		SmallPanel A1_2_1_1_4 = new SmallPanel();
+		A1_2_1_1_4.setLayout(null);
+		A1_2_1_1_4.setBackground(new Color(17, 20, 137));
+		A1_2_1_1_4.setBounds(765, 8, 175, 40);
+		A1_5.add(A1_2_1_1_4);
+		
+		JLabel lblRegistrationNo_1_4 = new JLabel("Time Table");
+		lblRegistrationNo_1_4.setHorizontalAlignment(SwingConstants.CENTER);
+		lblRegistrationNo_1_4.setForeground(Color.WHITE);
+		lblRegistrationNo_1_4.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblRegistrationNo_1_4.setBounds(0, 0, 175, 40);
+		A1_2_1_1_4.add(lblRegistrationNo_1_4);
+		
+		JLabel lblClubRole_4 = new JLabel("Club Role");
+		lblClubRole_4.setHorizontalAlignment(SwingConstants.CENTER);
+		lblClubRole_4.setForeground(Color.DARK_GRAY);
+		lblClubRole_4.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblClubRole_4.setBounds(316, 8, 207, 40);
+		A1_5.add(lblClubRole_4);
+		
+		SmallPanel A1_2 = new SmallPanel();
+		A1_2.setLayout(null);
+		A1_2.setBackground(new Color(217, 217, 217));
+		
+		SmallPanel A1_2_1_2_3 = new SmallPanel();
+		A1_2_1_2_3.setLayout(null);
+		A1_2_1_2_3.setBackground(new Color(17, 20, 137));
+		A1_2_1_2_3.setBounds(22, 13, 259, 210);
+		A1_2.add(A1_2_1_2_3);
+		
+		JLabel lblNewLabel_1_6 = new JLabel("Images");
+		lblNewLabel_1_6.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_6.setForeground(Color.WHITE);
+		lblNewLabel_1_6.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNewLabel_1_6.setBounds(0, 0, 259, 210);
+		A1_2_1_2_3.add(lblNewLabel_1_6);
+		
+		Label label_1_1_2 = new Label("Announcement 2");
+		label_1_1_2.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		label_1_1_2.setAlignment(Label.CENTER);
+		label_1_1_2.setBounds(297, 13, 598, 210);
+		A1_2.add(label_1_1_2);
+		
+		SmallPanel A1_6 = new SmallPanel();
+		A1_6.setLayout(null);
+		A1_6.setBackground(new Color(217, 217, 217));
+		
+		SmallPanel A1_2_6 = new SmallPanel();
+		A1_2_6.setLayout(null);
+		A1_2_6.setBackground(new Color(17, 20, 137));
+		A1_2_6.setBounds(62, 8, 227, 40);
+		A1_6.add(A1_2_6);
+		
+		JLabel lblNewLabel_5 = new JLabel("Member Name");
+		lblNewLabel_5.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_5.setForeground(Color.WHITE);
+		lblNewLabel_5.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNewLabel_5.setBounds(10, 0, 195, 40);
+		A1_2_6.add(lblNewLabel_5);
+		
+		SmallPanel A1_2_1_6 = new SmallPanel();
+		A1_2_1_6.setLayout(null);
+		A1_2_1_6.setBackground(new Color(17, 20, 137));
+		A1_2_1_6.setBounds(554, 8, 207, 40);
+		A1_6.add(A1_2_1_6);
+		
+		JLabel lblRegistrationNo_6 = new JLabel("Registration No.");
+		lblRegistrationNo_6.setHorizontalAlignment(SwingConstants.CENTER);
+		lblRegistrationNo_6.setForeground(Color.WHITE);
+		lblRegistrationNo_6.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblRegistrationNo_6.setBounds(10, 0, 195, 40);
+		A1_2_1_6.add(lblRegistrationNo_6);
+		
+		SmallPanel A1_2_1_1_5 = new SmallPanel();
+		A1_2_1_1_5.setLayout(null);
+		A1_2_1_1_5.setBackground(new Color(17, 20, 137));
+		A1_2_1_1_5.setBounds(765, 8, 175, 40);
+		A1_6.add(A1_2_1_1_5);
+		
+		JLabel lblRegistrationNo_1_5 = new JLabel("Time Table");
+		lblRegistrationNo_1_5.setHorizontalAlignment(SwingConstants.CENTER);
+		lblRegistrationNo_1_5.setForeground(Color.WHITE);
+		lblRegistrationNo_1_5.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblRegistrationNo_1_5.setBounds(0, 0, 175, 40);
+		A1_2_1_1_5.add(lblRegistrationNo_1_5);
+		
+		JLabel lblClubRole_5 = new JLabel("Club Role");
+		lblClubRole_5.setHorizontalAlignment(SwingConstants.CENTER);
+		lblClubRole_5.setForeground(Color.DARK_GRAY);
+		lblClubRole_5.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblClubRole_5.setBounds(316, 8, 207, 40);
+		A1_6.add(lblClubRole_5);
+		GroupLayout gl_MemberInfo = new GroupLayout(MemberInfo);
+		gl_MemberInfo.setHorizontalGroup(
+			gl_MemberInfo.createParallelGroup(Alignment.LEADING)
+				.addGap(0, 1015, Short.MAX_VALUE)
+				.addGroup(gl_MemberInfo.createSequentialGroup()
+					.addGap(10)
+					.addGroup(gl_MemberInfo.createParallelGroup(Alignment.LEADING)
+						.addComponent(panel_4_2_1_1, GroupLayout.PREFERRED_SIZE, 995, GroupLayout.PREFERRED_SIZE)
+						.addComponent(A1_7, GroupLayout.PREFERRED_SIZE, 950, GroupLayout.PREFERRED_SIZE)
+						.addComponent(A1_1_2, GroupLayout.PREFERRED_SIZE, 950, GroupLayout.PREFERRED_SIZE)
+						.addComponent(A1_3_2, GroupLayout.PREFERRED_SIZE, 950, GroupLayout.PREFERRED_SIZE)
+						.addComponent(A1_4_2, GroupLayout.PREFERRED_SIZE, 950, GroupLayout.PREFERRED_SIZE)
+						.addComponent(A1_5, GroupLayout.PREFERRED_SIZE, 950, GroupLayout.PREFERRED_SIZE)
+						.addGroup(gl_MemberInfo.createParallelGroup(Alignment.TRAILING)
+							.addComponent(A1_2, GroupLayout.PREFERRED_SIZE, 930, GroupLayout.PREFERRED_SIZE)
+							.addComponent(A1_6, GroupLayout.PREFERRED_SIZE, 950, GroupLayout.PREFERRED_SIZE))))
+		);
+		gl_MemberInfo.setVerticalGroup(
+			gl_MemberInfo.createParallelGroup(Alignment.LEADING)
+				.addGap(0, 1283, Short.MAX_VALUE)
+				.addGroup(gl_MemberInfo.createSequentialGroup()
+					.addGap(27)
+					.addComponent(panel_4_2_1_1, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE)
+					.addGap(28)
+					.addComponent(A1_7, GroupLayout.PREFERRED_SIZE, 56, GroupLayout.PREFERRED_SIZE)
+					.addGap(18)
+					.addComponent(A1_1_2, GroupLayout.PREFERRED_SIZE, 56, GroupLayout.PREFERRED_SIZE)
+					.addGap(18)
+					.addComponent(A1_3_2, GroupLayout.PREFERRED_SIZE, 56, GroupLayout.PREFERRED_SIZE)
+					.addGap(18)
+					.addComponent(A1_4_2, GroupLayout.PREFERRED_SIZE, 56, GroupLayout.PREFERRED_SIZE)
+					.addGap(18)
+					.addComponent(A1_5, GroupLayout.PREFERRED_SIZE, 56, GroupLayout.PREFERRED_SIZE)
+					.addGap(18)
+					.addComponent(A1_6, GroupLayout.PREFERRED_SIZE, 56, GroupLayout.PREFERRED_SIZE)
+					.addGap(66)
+					.addComponent(A1_2, GroupLayout.PREFERRED_SIZE, 240, GroupLayout.PREFERRED_SIZE)
+					.addContainerGap(463, Short.MAX_VALUE))
+		);
+		MemberInfo.setLayout(gl_MemberInfo);
+		
+		RoundPanel panel_4_2_1 = new RoundPanel();
+		panel_4_2_1.setLayout(null);
+		panel_4_2_1.setForeground(Color.WHITE);
+		panel_4_2_1.setBackground(new Color(217, 217, 217));
+		
+		CircleButton2 btnNewButton_6_1 = new CircleButton2("");
+		btnNewButton_6_1.setText("");
+		btnNewButton_6_1.setSelected(true);
+		btnNewButton_6_1.setFocusPainted(false);
+		btnNewButton_6_1.setBorderPainted(false);
+		btnNewButton_6_1.setBorder(null);
+		btnNewButton_6_1.setBackground(UIManager.getColor("Button.background"));
+		btnNewButton_6_1.setBounds(23, 5, 23, 23);
+		panel_4_2_1.add(btnNewButton_6_1);
+		
+		textField_2 = new JTextField("Type Club name, Event Name, Venue, Time, Type of Event  to filter....");
+		textField_2.setForeground(new Color(102, 102, 102));
+		textField_2.setFont(new Font("Calibri", Font.BOLD, 13));
+		textField_2.setColumns(10);
+		textField_2.setBorder(null);
+		textField_2.setBackground(new Color(217, 217, 217));
+		textField_2.setBounds(56, 5, 899, 20);
+		panel_4_2_1.add(textField_2);
+		
+		CircleButton2 btnNewButton_7_1 = new CircleButton2("");
+		btnNewButton_7_1.setText("");
+		btnNewButton_7_1.setSelected(true);
+		btnNewButton_7_1.setFocusPainted(false);
+		btnNewButton_7_1.setBorderPainted(false);
+		btnNewButton_7_1.setBorder(null);
+		btnNewButton_7_1.setBackground(UIManager.getColor("Button.background"));
+		btnNewButton_7_1.setBounds(954, 4, 23, 23);
+		panel_4_2_1.add(btnNewButton_7_1);
+		
+		SmallPanel A1_2_8_1 = new SmallPanel();
+		A1_2_8_1.setLayout(null);
+		A1_2_8_1.setBackground(new Color(217, 217, 217));
+		
+		SmallPanel A1_2_1_2_3_1 = new SmallPanel();
+		A1_2_1_2_3_1.setLayout(null);
+		A1_2_1_2_3_1.setBackground(new Color(17, 20, 137));
+		A1_2_1_2_3_1.setBounds(22, 13, 259, 210);
+		A1_2_8_1.add(A1_2_1_2_3_1);
+		
+		JLabel lblNewLabel_1_2_3 = new JLabel("Images");
+		lblNewLabel_1_2_3.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_2_3.setForeground(Color.WHITE);
+		lblNewLabel_1_2_3.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNewLabel_1_2_3.setBounds(0, 0, 259, 210);
+		A1_2_1_2_3_1.add(lblNewLabel_1_2_3);
+		
+		Label label_1_1_1 = new Label("Announcement 4");
+		label_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		label_1_1_1.setAlignment(Label.CENTER);
+		label_1_1_1.setBounds(305, 13, 598, 210);
+		A1_2_8_1.add(label_1_1_1);
+		
+		SmallPanel A1_2_2_4 = new SmallPanel();
+		A1_2_2_4.setLayout(null);
+		A1_2_2_4.setBackground(new Color(217, 217, 217));
+		
+		SmallPanel A1_2_1_2_2_1 = new SmallPanel();
+		A1_2_1_2_2_1.setLayout(null);
+		A1_2_1_2_2_1.setBackground(new Color(17, 20, 137));
+		A1_2_1_2_2_1.setBounds(22, 13, 259, 210);
+		A1_2_2_4.add(A1_2_1_2_2_1);
+		
+		JLabel lblNewLabel_1_1_1 = new JLabel("Images");
+		lblNewLabel_1_1_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_1_1.setForeground(Color.WHITE);
+		lblNewLabel_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNewLabel_1_1_1.setBounds(0, 0, 259, 210);
+		A1_2_1_2_2_1.add(lblNewLabel_1_1_1);
+		
+		Label label_1_1 = new Label("Announcement 3");
+		label_1_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		label_1_1.setAlignment(Label.CENTER);
+		label_1_1.setBounds(308, 13, 598, 210);
+		A1_2_2_4.add(label_1_1);
+		GroupLayout gl_Announcem_1 = new GroupLayout(Announcem_1);
+		gl_Announcem_1.setHorizontalGroup(
+			gl_Announcem_1.createParallelGroup(Alignment.LEADING)
+				.addGap(0, 1015, Short.MAX_VALUE)
+				.addGroup(gl_Announcem_1.createSequentialGroup()
+					.addGroup(gl_Announcem_1.createParallelGroup(Alignment.LEADING)
+						.addGroup(gl_Announcem_1.createSequentialGroup()
+							.addGap(30)
+							.addComponent(A1, GroupLayout.PREFERRED_SIZE, 930, GroupLayout.PREFERRED_SIZE))
+						.addGroup(gl_Announcem_1.createSequentialGroup()
+							.addGap(30)
+							.addComponent(A1_1, GroupLayout.PREFERRED_SIZE, 930, GroupLayout.PREFERRED_SIZE))
+						.addGroup(gl_Announcem_1.createSequentialGroup()
+							.addContainerGap()
+							.addComponent(panel_4_2_1, GroupLayout.PREFERRED_SIZE, 987, GroupLayout.PREFERRED_SIZE))
+						.addGroup(gl_Announcem_1.createSequentialGroup()
+							.addGap(38)
+							.addGroup(gl_Announcem_1.createParallelGroup(Alignment.LEADING)
+								.addComponent(A1_2_8_1, GroupLayout.PREFERRED_SIZE, 930, GroupLayout.PREFERRED_SIZE)
+								.addComponent(A1_2_2_4, GroupLayout.PREFERRED_SIZE, 930, GroupLayout.PREFERRED_SIZE))))
+					.addContainerGap(18, Short.MAX_VALUE))
+		);
+		gl_Announcem_1.setVerticalGroup(
+			gl_Announcem_1.createParallelGroup(Alignment.LEADING)
+				.addGap(0, 1347, Short.MAX_VALUE)
+				.addGroup(gl_Announcem_1.createSequentialGroup()
+					.addGap(27)
+					.addComponent(panel_4_2_1, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE)
+					.addGap(28)
+					.addComponent(A1, GroupLayout.PREFERRED_SIZE, 240, GroupLayout.PREFERRED_SIZE)
+					.addGap(14)
+					.addComponent(A1_1, GroupLayout.PREFERRED_SIZE, 240, GroupLayout.PREFERRED_SIZE)
+					.addGap(18)
+					.addComponent(A1_2_2_4, GroupLayout.PREFERRED_SIZE, 240, GroupLayout.PREFERRED_SIZE)
+					.addGap(18)
+					.addComponent(A1_2_8_1, GroupLayout.PREFERRED_SIZE, 240, GroupLayout.PREFERRED_SIZE)
+					.addGap(249))
+		);
+		Announcem_1.setLayout(gl_Announcem_1);
 		
 		JPanel GroupInfo = new RoundPanel();
 		GroupInfo.setBackground(Color.RED);
@@ -148,55 +849,732 @@ public class MainProject extends JFrame {
 		layeredPane.add(GroupInfo, "name_363291651301300");
 		GroupInfo.setLayout(null);
 		
-		JPanel ClubInfo = new RoundPanel();
-		ClubInfo.setLayout(null);
-		ClubInfo.setBackground(new Color(255, 255, 255));
-		layeredPane.add(ClubInfo, "name_363395450215900");
+		JScrollPane scrollPane_1_1 = new JScrollPane();
+		scrollPane_1_1.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+		scrollPane_1_1.setBounds(0, 0, 1015, 431);
+		GroupInfo.add(scrollPane_1_1);
 		
-		ClubLogo btnNewButton_clublogo = new ClubLogo("New button");
-		btnNewButton_clublogo.setForeground(new Color(255, 255, 255));
-		btnNewButton_clublogo.setIcon(new ImageIcon("D:\\SEM 3\\shakti\\Downloads\\editicon (2).jpg"));
-		btnNewButton_clublogo.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		btnNewButton_clublogo.setText("Club Logo");
-		btnNewButton_clublogo.setFont(new Font("Cambria", Font.BOLD, 17));
-		btnNewButton_clublogo.setBorder(null);
-		btnNewButton_clublogo.setBackground(new Color(17, 20, 137));
-		btnNewButton_clublogo.setBounds(395, 10, 170, 200);
-		ClubInfo.add(btnNewButton_clublogo);
+		RoundPanel GroupInfo_1 = new RoundPanel();
+		GroupInfo_1.setBorder(null);
+		GroupInfo_1.setBackground(Color.WHITE);
+		scrollPane_1_1.setViewportView(GroupInfo_1);
 		
-		RoundPanel panel_descr = new RoundPanel();
-		panel_descr.setLayout(null);
-		panel_descr.setBackground(new Color(17, 20, 137));
-		panel_descr.setBounds(106, 270, 803, 151);
-		ClubInfo.add(panel_descr);
+		SmallPanel A1_4 = new SmallPanel();
+		A1_4.setLayout(null);
+		A1_4.setBackground(Color.GRAY);
 		
-		JLabel lblClubName_1_1 = new JLabel(" Description of the Club");
-		lblClubName_1_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblClubName_1_1.setIcon(new ImageIcon("D:\\SEM 3\\shakti\\Downloads\\editicon (2).jpg"));
-		lblClubName_1_1.setIconTextGap(10);
-		lblClubName_1_1.setForeground(Color.WHITE);
-		lblClubName_1_1.setFont(new Font("Cambria", Font.PLAIN, 25));
-		lblClubName_1_1.setBounds(208, 50, 397, 62);
-		panel_descr.add(lblClubName_1_1);
+		JLabel lblNewLabel_1 = new JLabel("Name of the Group");
+		lblNewLabel_1.setHorizontalTextPosition(SwingConstants.LEADING);
+		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1.setForeground(Color.WHITE);
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_1.setBounds(22, 10, 294, 31);
+		A1_4.add(lblNewLabel_1);
 		
-		JLabel lblClubName = new JLabel(" Name of the Club");
-		lblClubName.setHorizontalAlignment(SwingConstants.CENTER);
-		lblClubName.setIconTextGap(10);
-		lblClubName.setForeground(new Color(17, 20, 137));
-		lblClubName.setFont(new Font("Cambria", Font.BOLD, 35));
-		lblClubName.setIcon(null);
-		lblClubName.setBounds(304, 199, 375, 62);
-		ClubInfo.add(lblClubName);
+		SmallPanel A1_2_1_2 = new SmallPanel();
+		A1_2_1_2.setLayout(null);
+		A1_2_1_2.setBackground(Color.GRAY);
 		
-		JLabel lblClubName_1 = new JLabel(" Name of the Club");
-		lblClubName_1.setIconTextGap(10);
-		lblClubName_1.setForeground(new Color(255, 255, 255));
-		lblClubName_1.setFont(new Font("Cambria", Font.PLAIN, 30));
-		lblClubName_1.setBounds(242, 200, 424, 62);
-		ClubInfo.add(lblClubName_1);
+		JLabel lblNewLabel_1_2 = new JLabel("Media");
+		lblNewLabel_1_2.setHorizontalTextPosition(SwingConstants.LEADING);
+		lblNewLabel_1_2.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_2.setForeground(Color.WHITE);
+		lblNewLabel_1_2.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_1_2.setBounds(10, 10, 192, 31);
+		A1_2_1_2.add(lblNewLabel_1_2);
+		
+		SmallPanel A1_2_2 = new SmallPanel();
+		A1_2_2.setLayout(null);
+		A1_2_2.setBackground(Color.GRAY);
+		
+		JLabel lblNewLabel_1_2_1 = new JLabel("Links");
+		lblNewLabel_1_2_1.setHorizontalTextPosition(SwingConstants.LEADING);
+		lblNewLabel_1_2_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_2_1.setForeground(Color.WHITE);
+		lblNewLabel_1_2_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_1_2_1.setBounds(10, 10, 192, 31);
+		A1_2_2.add(lblNewLabel_1_2_1);
+		
+		SmallPanel A1_2_2_1 = new SmallPanel();
+		A1_2_2_1.setLayout(null);
+		A1_2_2_1.setBackground(Color.GRAY);
+		
+		JLabel lblNewLabel_1_2_2 = new JLabel("Docs");
+		lblNewLabel_1_2_2.setHorizontalTextPosition(SwingConstants.LEADING);
+		lblNewLabel_1_2_2.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_2_2.setForeground(Color.WHITE);
+		lblNewLabel_1_2_2.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_1_2_2.setBounds(10, 10, 192, 31);
+		A1_2_2_1.add(lblNewLabel_1_2_2);
+		
+		SmallPanel A1_3_1 = new SmallPanel();
+		A1_3_1.setLayout(null);
+		A1_3_1.setBackground(Color.GRAY);
+		
+		JLabel lblNewLabel_1_3_1 = new JLabel("Add Participants");
+		lblNewLabel_1_3_1.setHorizontalTextPosition(SwingConstants.LEADING);
+		lblNewLabel_1_3_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_3_1.setForeground(Color.WHITE);
+		lblNewLabel_1_3_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_1_3_1.setBounds(10, 10, 294, 40);
+		A1_3_1.add(lblNewLabel_1_3_1);
+		
+		SmallPanel A1_3_1_1 = new SmallPanel();
+		A1_3_1_1.setLayout(null);
+		A1_3_1_1.setBackground(Color.GRAY);
+		
+		JLabel lblNewLabel_1_3 = new JLabel("Remove Participants");
+		lblNewLabel_1_3.setHorizontalTextPosition(SwingConstants.LEADING);
+		lblNewLabel_1_3.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_3.setForeground(Color.WHITE);
+		lblNewLabel_1_3.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_1_3.setBounds(10, 10, 294, 40);
+		A1_3_1_1.add(lblNewLabel_1_3);
+		
+		SmallPanel A1_4_1 = new SmallPanel();
+		A1_4_1.setLayout(null);
+		A1_4_1.setBackground(Color.GRAY);
+		
+		JLabel lblNewLabel_1_3_1_1 = new JLabel("Create New Group");
+		lblNewLabel_1_3_1_1.setHorizontalTextPosition(SwingConstants.LEADING);
+		lblNewLabel_1_3_1_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_3_1_1.setForeground(Color.WHITE);
+		lblNewLabel_1_3_1_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_1_3_1_1.setBounds(177, 0, 294, 50);
+		A1_4_1.add(lblNewLabel_1_3_1_1);
+		
+		SmallPanel A1_2_1_1_1 = new SmallPanel();
+		A1_2_1_1_1.setLayout(null);
+		A1_2_1_1_1.setBackground(Color.LIGHT_GRAY);
+		
+		JLabel lblNewLabel_1_3_1_4 = new JLabel("Who can send messages?");
+		lblNewLabel_1_3_1_4.setHorizontalTextPosition(SwingConstants.LEADING);
+		lblNewLabel_1_3_1_4.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_3_1_4.setForeground(Color.WHITE);
+		lblNewLabel_1_3_1_4.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_1_3_1_4.setBounds(0, 52, 317, 40);
+		A1_2_1_1_1.add(lblNewLabel_1_3_1_4);
+		
+		JRadioButton rdbtnNewRadioButton = new JRadioButton("Admin Only");
+		rdbtnNewRadioButton.setHorizontalAlignment(SwingConstants.CENTER);
+		rdbtnNewRadioButton.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		
+		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("Anybody");
+		rdbtnNewRadioButton_1.setHorizontalAlignment(SwingConstants.CENTER);
+		rdbtnNewRadioButton_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		
+		JRadioButton rdbtnNewRadioButton_2 = new JRadioButton("Selected Members");
+		rdbtnNewRadioButton_2.setHorizontalAlignment(SwingConstants.CENTER);
+		rdbtnNewRadioButton_2.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		
+		JLabel lblNewLabel = new JLabel("Send Invites: ");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		
+		SmallPanel A1_2_1_1_1_1 = new SmallPanel();
+		A1_2_1_1_1_1.setLayout(null);
+		A1_2_1_1_1_1.setBackground(Color.LIGHT_GRAY);
+		
+		JLabel lblNewLabel_1_3_1_3 = new JLabel("Comma seperated Reg. No.\r\n");
+		lblNewLabel_1_3_1_3.setHorizontalTextPosition(SwingConstants.LEADING);
+		lblNewLabel_1_3_1_3.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_3_1_3.setForeground(Color.WHITE);
+		lblNewLabel_1_3_1_3.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_1_3_1_3.setBounds(0, 0, 249, 132);
+		A1_2_1_1_1_1.add(lblNewLabel_1_3_1_3);
+		
+		JLabel lblOr = new JLabel("or");
+		lblOr.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		
+		JLabel lblUploadAnExcel = new JLabel("Upload an Excel file");
+		lblUploadAnExcel.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		
+		JLabel lblEditGroupAdmins = new JLabel("Edit Group Admins: ");
+		lblEditGroupAdmins.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		
+		SmallPanel A1_4_1_1 = new SmallPanel();
+		A1_4_1_1.setLayout(null);
+		A1_4_1_1.setBackground(Color.LIGHT_GRAY);
+		
+		JLabel lblNewLabel_1_3_1_2 = new JLabel("Member List\r\n");
+		lblNewLabel_1_3_1_2.setHorizontalTextPosition(SwingConstants.LEADING);
+		lblNewLabel_1_3_1_2.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_3_1_2.setForeground(Color.WHITE);
+		lblNewLabel_1_3_1_2.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_1_3_1_2.setBounds(89, 0, 294, 51);
+		A1_4_1_1.add(lblNewLabel_1_3_1_2);
+		
+		SmallPanel A1_4_1_1_1 = new SmallPanel();
+		A1_4_1_1_1.setLayout(null);
+		A1_4_1_1_1.setBackground(Color.LIGHT_GRAY);
+		
+		JLabel lblExitGroup = new JLabel("Exit Group ");
+		lblExitGroup.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblExitGroup.setBounds(273, 0, 97, 42);
+		A1_4_1_1_1.add(lblExitGroup);
+		
+		SmallPanel A1_1_1 = new SmallPanel();
+		A1_1_1.setLayout(null);
+		A1_1_1.setBackground(Color.GRAY);
+		
+		JLabel lblNewLabel_1_1 = new JLabel("Description");
+		lblNewLabel_1_1.setHorizontalTextPosition(SwingConstants.LEADING);
+		lblNewLabel_1_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_1.setForeground(Color.WHITE);
+		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_1_1.setBounds(35, 10, 869, 134);
+		A1_1_1.add(lblNewLabel_1_1);
+		
+		JLabel lblNewLabel_1_3_1_3_1 = new JLabel("");
+		lblNewLabel_1_3_1_3_1.setHorizontalTextPosition(SwingConstants.LEADING);
+		lblNewLabel_1_3_1_3_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_3_1_3_1.setForeground(Color.WHITE);
+		lblNewLabel_1_3_1_3_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		GroupLayout gl_GroupInfo_1 = new GroupLayout(GroupInfo_1);
+		gl_GroupInfo_1.setHorizontalGroup(
+			gl_GroupInfo_1.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_GroupInfo_1.createSequentialGroup()
+					.addGap(327)
+					.addComponent(A1_4, GroupLayout.PREFERRED_SIZE, 339, GroupLayout.PREFERRED_SIZE))
+				.addGroup(gl_GroupInfo_1.createSequentialGroup()
+					.addGap(28)
+					.addComponent(A1_1_1, GroupLayout.PREFERRED_SIZE, 939, GroupLayout.PREFERRED_SIZE))
+				.addGroup(gl_GroupInfo_1.createSequentialGroup()
+					.addGap(190)
+					.addComponent(A1_2_1_2, GroupLayout.PREFERRED_SIZE, 212, GroupLayout.PREFERRED_SIZE)
+					.addGap(6)
+					.addComponent(A1_2_2, GroupLayout.PREFERRED_SIZE, 212, GroupLayout.PREFERRED_SIZE)
+					.addGap(6)
+					.addComponent(A1_2_2_1, GroupLayout.PREFERRED_SIZE, 212, GroupLayout.PREFERRED_SIZE))
+				.addGroup(gl_GroupInfo_1.createSequentialGroup()
+					.addGap(190)
+					.addComponent(A1_3_1, GroupLayout.PREFERRED_SIZE, 322, GroupLayout.PREFERRED_SIZE)
+					.addGap(6)
+					.addComponent(A1_3_1_1, GroupLayout.PREFERRED_SIZE, 320, GroupLayout.PREFERRED_SIZE))
+				.addGroup(gl_GroupInfo_1.createSequentialGroup()
+					.addGap(190)
+					.addComponent(A1_4_1, GroupLayout.PREFERRED_SIZE, 652, GroupLayout.PREFERRED_SIZE))
+				.addGroup(gl_GroupInfo_1.createSequentialGroup()
+					.addGap(238)
+					.addComponent(A1_2_1_1_1, GroupLayout.PREFERRED_SIZE, 317, GroupLayout.PREFERRED_SIZE)
+					.addGap(18)
+					.addGroup(gl_GroupInfo_1.createParallelGroup(Alignment.LEADING)
+						.addComponent(rdbtnNewRadioButton, GroupLayout.PREFERRED_SIZE, 185, GroupLayout.PREFERRED_SIZE)
+						.addComponent(rdbtnNewRadioButton_1, GroupLayout.PREFERRED_SIZE, 185, GroupLayout.PREFERRED_SIZE)
+						.addComponent(rdbtnNewRadioButton_2, GroupLayout.PREFERRED_SIZE, 185, GroupLayout.PREFERRED_SIZE)))
+				.addGroup(gl_GroupInfo_1.createSequentialGroup()
+					.addGap(190)
+					.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 114, GroupLayout.PREFERRED_SIZE)
+					.addGap(10)
+					.addComponent(A1_2_1_1_1_1, GroupLayout.PREFERRED_SIZE, 249, GroupLayout.PREFERRED_SIZE)
+					.addGap(22)
+					.addComponent(lblOr, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE)
+					.addGap(6)
+					.addGroup(gl_GroupInfo_1.createParallelGroup(Alignment.LEADING)
+						.addComponent(lblUploadAnExcel, GroupLayout.PREFERRED_SIZE, 168, GroupLayout.PREFERRED_SIZE)
+						.addGroup(gl_GroupInfo_1.createSequentialGroup()
+							.addGap(29)
+							.addComponent(lblNewLabel_1_3_1_3_1, GroupLayout.PREFERRED_SIZE, 75, GroupLayout.PREFERRED_SIZE))))
+				.addGroup(gl_GroupInfo_1.createSequentialGroup()
+					.addGap(186)
+					.addGroup(gl_GroupInfo_1.createParallelGroup(Alignment.LEADING)
+						.addGroup(gl_GroupInfo_1.createSequentialGroup()
+							.addGap(171)
+							.addComponent(A1_4_1_1, GroupLayout.PREFERRED_SIZE, 480, GroupLayout.PREFERRED_SIZE))
+						.addComponent(lblEditGroupAdmins, GroupLayout.PREFERRED_SIZE, 174, GroupLayout.PREFERRED_SIZE)))
+				.addGroup(gl_GroupInfo_1.createSequentialGroup()
+					.addGap(190)
+					.addComponent(A1_4_1_1_1, GroupLayout.PREFERRED_SIZE, 648, GroupLayout.PREFERRED_SIZE))
+		);
+		gl_GroupInfo_1.setVerticalGroup(
+			gl_GroupInfo_1.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_GroupInfo_1.createSequentialGroup()
+					.addGap(48)
+					.addComponent(A1_4, GroupLayout.PREFERRED_SIZE, 51, GroupLayout.PREFERRED_SIZE)
+					.addGap(18)
+					.addComponent(A1_1_1, GroupLayout.PREFERRED_SIZE, 154, GroupLayout.PREFERRED_SIZE)
+					.addGap(30)
+					.addGroup(gl_GroupInfo_1.createParallelGroup(Alignment.LEADING)
+						.addComponent(A1_2_1_2, GroupLayout.PREFERRED_SIZE, 51, GroupLayout.PREFERRED_SIZE)
+						.addComponent(A1_2_2, GroupLayout.PREFERRED_SIZE, 51, GroupLayout.PREFERRED_SIZE)
+						.addComponent(A1_2_2_1, GroupLayout.PREFERRED_SIZE, 51, GroupLayout.PREFERRED_SIZE))
+					.addGap(18)
+					.addGroup(gl_GroupInfo_1.createParallelGroup(Alignment.LEADING)
+						.addComponent(A1_3_1, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
+						.addComponent(A1_3_1_1, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE))
+					.addGap(18)
+					.addComponent(A1_4_1, GroupLayout.PREFERRED_SIZE, 51, GroupLayout.PREFERRED_SIZE)
+					.addGap(58)
+					.addGroup(gl_GroupInfo_1.createParallelGroup(Alignment.LEADING)
+						.addComponent(A1_2_1_1_1, GroupLayout.PREFERRED_SIZE, 132, GroupLayout.PREFERRED_SIZE)
+						.addGroup(gl_GroupInfo_1.createSequentialGroup()
+							.addComponent(rdbtnNewRadioButton, GroupLayout.PREFERRED_SIZE, 32, GroupLayout.PREFERRED_SIZE)
+							.addGap(18)
+							.addComponent(rdbtnNewRadioButton_1, GroupLayout.PREFERRED_SIZE, 32, GroupLayout.PREFERRED_SIZE)
+							.addGap(18)
+							.addComponent(rdbtnNewRadioButton_2, GroupLayout.PREFERRED_SIZE, 32, GroupLayout.PREFERRED_SIZE)))
+					.addGap(29)
+					.addGroup(gl_GroupInfo_1.createParallelGroup(Alignment.LEADING)
+						.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 42, GroupLayout.PREFERRED_SIZE)
+						.addComponent(A1_2_1_1_1_1, GroupLayout.PREFERRED_SIZE, 132, GroupLayout.PREFERRED_SIZE)
+						.addGroup(gl_GroupInfo_1.createSequentialGroup()
+							.addGap(45)
+							.addComponent(lblOr, GroupLayout.PREFERRED_SIZE, 42, GroupLayout.PREFERRED_SIZE))
+						.addGroup(gl_GroupInfo_1.createSequentialGroup()
+							.addComponent(lblUploadAnExcel, GroupLayout.PREFERRED_SIZE, 42, GroupLayout.PREFERRED_SIZE)
+							.addGap(10)
+							.addComponent(lblNewLabel_1_3_1_3_1, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)))
+					.addGap(23)
+					.addGroup(gl_GroupInfo_1.createParallelGroup(Alignment.LEADING)
+						.addComponent(A1_4_1_1, GroupLayout.PREFERRED_SIZE, 51, GroupLayout.PREFERRED_SIZE)
+						.addGroup(gl_GroupInfo_1.createSequentialGroup()
+							.addGap(9)
+							.addComponent(lblEditGroupAdmins, GroupLayout.PREFERRED_SIZE, 42, GroupLayout.PREFERRED_SIZE)))
+					.addGap(22)
+					.addComponent(A1_4_1_1_1, GroupLayout.PREFERRED_SIZE, 51, GroupLayout.PREFERRED_SIZE))
+		);
+		GroupInfo_1.setLayout(gl_GroupInfo_1);
+		
+		
+		RoundPanel MembInfo = new RoundPanel();
+		MembInfo.setBackground(Color.WHITE);
+		layeredPane.add(MembInfo);
+		MembInfo.setLayout(new BorderLayout(0, 0));
+		
+		JScrollPane scrollPane_3 = new JScrollPane();
+		scrollPane_3.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+		MembInfo.add(scrollPane_3);
+		
+		RoundPanel MemberInfo_1 = new RoundPanel();
+		MemberInfo_1.setBorder(null);
+		MemberInfo_1.setBackground(Color.WHITE);
+		scrollPane_3.setViewportView(MemberInfo_1);
+		
+		RoundPanel panel_4_2_1_2 = new RoundPanel();
+		panel_4_2_1_2.setLayout(null);
+		panel_4_2_1_2.setForeground(Color.WHITE);
+		panel_4_2_1_2.setBackground(new Color(217, 217, 217));
+		
+		CircleButton2 btnNewButton_6_1_2 = new CircleButton2("");
+		btnNewButton_6_1_2.setText("");
+		btnNewButton_6_1_2.setSelected(true);
+		btnNewButton_6_1_2.setFocusPainted(false);
+		btnNewButton_6_1_2.setBorderPainted(false);
+		btnNewButton_6_1_2.setBorder(null);
+		btnNewButton_6_1_2.setBackground(UIManager.getColor("Button.background"));
+		btnNewButton_6_1_2.setBounds(23, 5, 23, 23);
+		panel_4_2_1_2.add(btnNewButton_6_1_2);
+		
+		textField_3 = new JTextField("Search by Name/Registration No.");
+		textField_3.setForeground(new Color(102, 102, 102));
+		textField_3.setFont(new Font("Calibri", Font.BOLD, 15));
+		textField_3.setColumns(10);
+		textField_3.setBorder(null);
+		textField_3.setBackground(new Color(217, 217, 217));
+		textField_3.setBounds(56, 5, 899, 23);
+		panel_4_2_1_2.add(textField_3);
+		
+		CircleButton2 btnNewButton_7_1_2 = new CircleButton2("");
+		btnNewButton_7_1_2.setText("");
+		btnNewButton_7_1_2.setSelected(true);
+		btnNewButton_7_1_2.setFocusPainted(false);
+		btnNewButton_7_1_2.setBorderPainted(false);
+		btnNewButton_7_1_2.setBorder(null);
+		btnNewButton_7_1_2.setBackground(UIManager.getColor("Button.background"));
+		btnNewButton_7_1_2.setBounds(954, 4, 23, 23);
+		panel_4_2_1_2.add(btnNewButton_7_1_2);
+		
+		SmallPanel A1_8 = new SmallPanel();
+		A1_8.setLayout(null);
+		A1_8.setBackground(new Color(217, 217, 217));
+		
+		SmallPanel A1_2_8 = new SmallPanel();
+		A1_2_8.setLayout(null);
+		A1_2_8.setBackground(new Color(17, 20, 137));
+		A1_2_8.setBounds(62, 8, 227, 40);
+		A1_8.add(A1_2_8);
+		
+		JLabel lblNewLabel_7 = new JLabel("Member Name");
+		lblNewLabel_7.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_7.setForeground(Color.WHITE);
+		lblNewLabel_7.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNewLabel_7.setBounds(10, 0, 195, 40);
+		A1_2_8.add(lblNewLabel_7);
+		
+		SmallPanel A1_2_1_8 = new SmallPanel();
+		A1_2_1_8.setLayout(null);
+		A1_2_1_8.setBackground(new Color(17, 20, 137));
+		A1_2_1_8.setBounds(554, 8, 207, 40);
+		A1_8.add(A1_2_1_8);
+		
+		JLabel lblRegistrationNo_7 = new JLabel("Registration No.");
+		lblRegistrationNo_7.setHorizontalAlignment(SwingConstants.CENTER);
+		lblRegistrationNo_7.setForeground(Color.WHITE);
+		lblRegistrationNo_7.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblRegistrationNo_7.setBounds(10, 0, 195, 40);
+		A1_2_1_8.add(lblRegistrationNo_7);
+		
+		SmallPanel A1_2_1_1_7 = new SmallPanel();
+		A1_2_1_1_7.setLayout(null);
+		A1_2_1_1_7.setBackground(new Color(17, 20, 137));
+		A1_2_1_1_7.setBounds(765, 8, 175, 40);
+		A1_8.add(A1_2_1_1_7);
+		
+		JLabel lblRegistrationNo_1_6 = new JLabel("Time Table");
+		lblRegistrationNo_1_6.setHorizontalAlignment(SwingConstants.CENTER);
+		lblRegistrationNo_1_6.setForeground(Color.WHITE);
+		lblRegistrationNo_1_6.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblRegistrationNo_1_6.setBounds(0, 0, 175, 40);
+		A1_2_1_1_7.add(lblRegistrationNo_1_6);
+		
+		JLabel lblClubRole_6 = new JLabel("Club Role");
+		lblClubRole_6.setHorizontalAlignment(SwingConstants.CENTER);
+		lblClubRole_6.setForeground(Color.DARK_GRAY);
+		lblClubRole_6.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblClubRole_6.setBounds(316, 8, 207, 40);
+		A1_8.add(lblClubRole_6);
+		
+		SmallPanel A1_1_3 = new SmallPanel();
+		A1_1_3.setLayout(null);
+		A1_1_3.setBackground(new Color(217, 217, 217));
+		
+		SmallPanel A1_2_2_3 = new SmallPanel();
+		A1_2_2_3.setLayout(null);
+		A1_2_2_3.setBackground(new Color(17, 20, 137));
+		A1_2_2_3.setBounds(62, 8, 227, 40);
+		A1_1_3.add(A1_2_2_3);
+		
+		JLabel lblNewLabel_1_5 = new JLabel("Member Name");
+		lblNewLabel_1_5.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_5.setForeground(Color.WHITE);
+		lblNewLabel_1_5.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNewLabel_1_5.setBounds(10, 0, 195, 40);
+		A1_2_2_3.add(lblNewLabel_1_5);
+		
+		SmallPanel A1_2_1_2_2 = new SmallPanel();
+		A1_2_1_2_2.setLayout(null);
+		A1_2_1_2_2.setBackground(new Color(17, 20, 137));
+		A1_2_1_2_2.setBounds(554, 8, 207, 40);
+		A1_1_3.add(A1_2_1_2_2);
+		
+		JLabel lblRegistrationNo_2_1 = new JLabel("Registration No.");
+		lblRegistrationNo_2_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblRegistrationNo_2_1.setForeground(Color.WHITE);
+		lblRegistrationNo_2_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblRegistrationNo_2_1.setBounds(10, 0, 195, 40);
+		A1_2_1_2_2.add(lblRegistrationNo_2_1);
+		
+		SmallPanel A1_2_1_1_1_3 = new SmallPanel();
+		A1_2_1_1_1_3.setLayout(null);
+		A1_2_1_1_1_3.setBackground(new Color(17, 20, 137));
+		A1_2_1_1_1_3.setBounds(765, 8, 175, 40);
+		A1_1_3.add(A1_2_1_1_1_3);
+		
+		JLabel lblRegistrationNo_1_1_1 = new JLabel("Time Table");
+		lblRegistrationNo_1_1_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblRegistrationNo_1_1_1.setForeground(Color.WHITE);
+		lblRegistrationNo_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblRegistrationNo_1_1_1.setBounds(0, 0, 175, 40);
+		A1_2_1_1_1_3.add(lblRegistrationNo_1_1_1);
+		
+		JLabel lblClubRole_1_1 = new JLabel("Club Role");
+		lblClubRole_1_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblClubRole_1_1.setForeground(Color.DARK_GRAY);
+		lblClubRole_1_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblClubRole_1_1.setBounds(316, 8, 207, 40);
+		A1_1_3.add(lblClubRole_1_1);
+		
+		SmallPanel A1_3_3 = new SmallPanel();
+		A1_3_3.setLayout(null);
+		A1_3_3.setBackground(new Color(217, 217, 217));
+		
+		SmallPanel A1_2_3_1 = new SmallPanel();
+		A1_2_3_1.setLayout(null);
+		A1_2_3_1.setBackground(new Color(17, 20, 137));
+		A1_2_3_1.setBounds(62, 8, 227, 40);
+		A1_3_3.add(A1_2_3_1);
+		
+		JLabel lblNewLabel_2_1 = new JLabel("Member Name");
+		lblNewLabel_2_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_2_1.setForeground(Color.WHITE);
+		lblNewLabel_2_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNewLabel_2_1.setBounds(10, 0, 195, 40);
+		A1_2_3_1.add(lblNewLabel_2_1);
+		
+		SmallPanel A1_2_1_3_1 = new SmallPanel();
+		A1_2_1_3_1.setLayout(null);
+		A1_2_1_3_1.setBackground(new Color(17, 20, 137));
+		A1_2_1_3_1.setBounds(554, 8, 207, 40);
+		A1_3_3.add(A1_2_1_3_1);
+		
+		JLabel lblRegistrationNo_3_1 = new JLabel("Registration No.");
+		lblRegistrationNo_3_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblRegistrationNo_3_1.setForeground(Color.WHITE);
+		lblRegistrationNo_3_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblRegistrationNo_3_1.setBounds(10, 0, 195, 40);
+		A1_2_1_3_1.add(lblRegistrationNo_3_1);
+		
+		SmallPanel A1_2_1_1_2_1 = new SmallPanel();
+		A1_2_1_1_2_1.setLayout(null);
+		A1_2_1_1_2_1.setBackground(new Color(17, 20, 137));
+		A1_2_1_1_2_1.setBounds(765, 8, 175, 40);
+		A1_3_3.add(A1_2_1_1_2_1);
+		
+		JLabel lblRegistrationNo_1_2_1 = new JLabel("Time Table");
+		lblRegistrationNo_1_2_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblRegistrationNo_1_2_1.setForeground(Color.WHITE);
+		lblRegistrationNo_1_2_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblRegistrationNo_1_2_1.setBounds(0, 0, 175, 40);
+		A1_2_1_1_2_1.add(lblRegistrationNo_1_2_1);
+		
+		JLabel lblClubRole_2_1 = new JLabel("Club Role");
+		lblClubRole_2_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblClubRole_2_1.setForeground(Color.DARK_GRAY);
+		lblClubRole_2_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblClubRole_2_1.setBounds(316, 8, 207, 40);
+		A1_3_3.add(lblClubRole_2_1);
+		
+		SmallPanel A1_4_3 = new SmallPanel();
+		A1_4_3.setLayout(null);
+		A1_4_3.setBackground(new Color(217, 217, 217));
+		
+		SmallPanel A1_2_4_1 = new SmallPanel();
+		A1_2_4_1.setLayout(null);
+		A1_2_4_1.setBackground(new Color(17, 20, 137));
+		A1_2_4_1.setBounds(62, 8, 227, 40);
+		A1_4_3.add(A1_2_4_1);
+		
+		JLabel lblNewLabel_3_1 = new JLabel("Member Name");
+		lblNewLabel_3_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_3_1.setForeground(Color.WHITE);
+		lblNewLabel_3_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNewLabel_3_1.setBounds(10, 0, 195, 40);
+		A1_2_4_1.add(lblNewLabel_3_1);
+		
+		SmallPanel A1_2_1_4_1 = new SmallPanel();
+		A1_2_1_4_1.setLayout(null);
+		A1_2_1_4_1.setBackground(new Color(17, 20, 137));
+		A1_2_1_4_1.setBounds(554, 8, 207, 40);
+		A1_4_3.add(A1_2_1_4_1);
+		
+		JLabel lblRegistrationNo_4_1 = new JLabel("Registration No.");
+		lblRegistrationNo_4_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblRegistrationNo_4_1.setForeground(Color.WHITE);
+		lblRegistrationNo_4_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblRegistrationNo_4_1.setBounds(10, 0, 195, 40);
+		A1_2_1_4_1.add(lblRegistrationNo_4_1);
+		
+		SmallPanel A1_2_1_1_3_1 = new SmallPanel();
+		A1_2_1_1_3_1.setLayout(null);
+		A1_2_1_1_3_1.setBackground(new Color(17, 20, 137));
+		A1_2_1_1_3_1.setBounds(765, 8, 175, 40);
+		A1_4_3.add(A1_2_1_1_3_1);
+		
+		JLabel lblRegistrationNo_1_3_1 = new JLabel("Time Table");
+		lblRegistrationNo_1_3_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblRegistrationNo_1_3_1.setForeground(Color.WHITE);
+		lblRegistrationNo_1_3_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblRegistrationNo_1_3_1.setBounds(0, 0, 175, 40);
+		A1_2_1_1_3_1.add(lblRegistrationNo_1_3_1);
+		
+		JLabel lblClubRole_3_1 = new JLabel("Club Role");
+		lblClubRole_3_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblClubRole_3_1.setForeground(Color.DARK_GRAY);
+		lblClubRole_3_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblClubRole_3_1.setBounds(316, 8, 207, 40);
+		A1_4_3.add(lblClubRole_3_1);
+		
+		SmallPanel A1_5_1 = new SmallPanel();
+		A1_5_1.setLayout(null);
+		A1_5_1.setBackground(new Color(217, 217, 217));
+		
+		SmallPanel A1_2_5_1 = new SmallPanel();
+		A1_2_5_1.setLayout(null);
+		A1_2_5_1.setBackground(new Color(17, 20, 137));
+		A1_2_5_1.setBounds(62, 8, 227, 40);
+		A1_5_1.add(A1_2_5_1);
+		
+		JLabel lblNewLabel_4_1 = new JLabel("Member Name");
+		lblNewLabel_4_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_4_1.setForeground(Color.WHITE);
+		lblNewLabel_4_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNewLabel_4_1.setBounds(10, 0, 195, 40);
+		A1_2_5_1.add(lblNewLabel_4_1);
+		
+		SmallPanel A1_2_1_5_1 = new SmallPanel();
+		A1_2_1_5_1.setLayout(null);
+		A1_2_1_5_1.setBackground(new Color(17, 20, 137));
+		A1_2_1_5_1.setBounds(554, 8, 207, 40);
+		A1_5_1.add(A1_2_1_5_1);
+		
+		JLabel lblRegistrationNo_5_1 = new JLabel("Registration No.");
+		lblRegistrationNo_5_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblRegistrationNo_5_1.setForeground(Color.WHITE);
+		lblRegistrationNo_5_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblRegistrationNo_5_1.setBounds(10, 0, 195, 40);
+		A1_2_1_5_1.add(lblRegistrationNo_5_1);
+		
+		SmallPanel A1_2_1_1_4_1 = new SmallPanel();
+		A1_2_1_1_4_1.setLayout(null);
+		A1_2_1_1_4_1.setBackground(new Color(17, 20, 137));
+		A1_2_1_1_4_1.setBounds(765, 8, 175, 40);
+		A1_5_1.add(A1_2_1_1_4_1);
+		
+		JLabel lblRegistrationNo_1_4_1 = new JLabel("Time Table");
+		lblRegistrationNo_1_4_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblRegistrationNo_1_4_1.setForeground(Color.WHITE);
+		lblRegistrationNo_1_4_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblRegistrationNo_1_4_1.setBounds(0, 0, 175, 40);
+		A1_2_1_1_4_1.add(lblRegistrationNo_1_4_1);
+		
+		JLabel lblClubRole_4_1 = new JLabel("Club Role");
+		lblClubRole_4_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblClubRole_4_1.setForeground(Color.DARK_GRAY);
+		lblClubRole_4_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblClubRole_4_1.setBounds(316, 8, 207, 40);
+		A1_5_1.add(lblClubRole_4_1);
+		
+		SmallPanel A1_6_1 = new SmallPanel();
+		A1_6_1.setLayout(null);
+		A1_6_1.setBackground(new Color(217, 217, 217));
+		
+		SmallPanel A1_2_6_1 = new SmallPanel();
+		A1_2_6_1.setLayout(null);
+		A1_2_6_1.setBackground(new Color(17, 20, 137));
+		A1_2_6_1.setBounds(62, 8, 227, 40);
+		A1_6_1.add(A1_2_6_1);
+		
+		JLabel lblNewLabel_5_1 = new JLabel("Member Name");
+		lblNewLabel_5_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_5_1.setForeground(Color.WHITE);
+		lblNewLabel_5_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNewLabel_5_1.setBounds(10, 0, 195, 40);
+		A1_2_6_1.add(lblNewLabel_5_1);
+		
+		SmallPanel A1_2_1_6_1 = new SmallPanel();
+		A1_2_1_6_1.setLayout(null);
+		A1_2_1_6_1.setBackground(new Color(17, 20, 137));
+		A1_2_1_6_1.setBounds(554, 8, 207, 40);
+		A1_6_1.add(A1_2_1_6_1);
+		
+		JLabel lblRegistrationNo_6_1 = new JLabel("Registration No.");
+		lblRegistrationNo_6_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblRegistrationNo_6_1.setForeground(Color.WHITE);
+		lblRegistrationNo_6_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblRegistrationNo_6_1.setBounds(10, 0, 195, 40);
+		A1_2_1_6_1.add(lblRegistrationNo_6_1);
+		
+		SmallPanel A1_2_1_1_5_1 = new SmallPanel();
+		A1_2_1_1_5_1.setLayout(null);
+		A1_2_1_1_5_1.setBackground(new Color(17, 20, 137));
+		A1_2_1_1_5_1.setBounds(765, 8, 175, 40);
+		A1_6_1.add(A1_2_1_1_5_1);
+		
+		JLabel lblRegistrationNo_1_5_1 = new JLabel("Time Table");
+		lblRegistrationNo_1_5_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblRegistrationNo_1_5_1.setForeground(Color.WHITE);
+		lblRegistrationNo_1_5_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblRegistrationNo_1_5_1.setBounds(0, 0, 175, 40);
+		A1_2_1_1_5_1.add(lblRegistrationNo_1_5_1);
+		
+		JLabel lblClubRole_5_1 = new JLabel("Club Role");
+		lblClubRole_5_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblClubRole_5_1.setForeground(Color.DARK_GRAY);
+		lblClubRole_5_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblClubRole_5_1.setBounds(316, 8, 207, 40);
+		A1_6_1.add(lblClubRole_5_1);
+		
+		SmallPanel A1_6_1_1 = new SmallPanel();
+		A1_6_1_1.setLayout(null);
+		A1_6_1_1.setBackground(new Color(217, 217, 217));
+		
+		SmallPanel A1_2_6_1_1 = new SmallPanel();
+		A1_2_6_1_1.setLayout(null);
+		A1_2_6_1_1.setBackground(new Color(17, 20, 137));
+		A1_2_6_1_1.setBounds(62, 8, 227, 40);
+		A1_6_1_1.add(A1_2_6_1_1);
+		
+		JLabel lblNewLabel_5_1_1 = new JLabel("Member Name");
+		lblNewLabel_5_1_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_5_1_1.setForeground(Color.WHITE);
+		lblNewLabel_5_1_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNewLabel_5_1_1.setBounds(10, 0, 195, 40);
+		A1_2_6_1_1.add(lblNewLabel_5_1_1);
+		
+		SmallPanel A1_2_1_6_1_1 = new SmallPanel();
+		A1_2_1_6_1_1.setLayout(null);
+		A1_2_1_6_1_1.setBackground(new Color(17, 20, 137));
+		A1_2_1_6_1_1.setBounds(554, 8, 207, 40);
+		A1_6_1_1.add(A1_2_1_6_1_1);
+		
+		JLabel lblRegistrationNo_6_1_1 = new JLabel("Registration No.");
+		lblRegistrationNo_6_1_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblRegistrationNo_6_1_1.setForeground(Color.WHITE);
+		lblRegistrationNo_6_1_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblRegistrationNo_6_1_1.setBounds(10, 0, 195, 40);
+		A1_2_1_6_1_1.add(lblRegistrationNo_6_1_1);
+		
+		SmallPanel A1_2_1_1_5_1_1 = new SmallPanel();
+		A1_2_1_1_5_1_1.setLayout(null);
+		A1_2_1_1_5_1_1.setBackground(new Color(17, 20, 137));
+		A1_2_1_1_5_1_1.setBounds(765, 8, 175, 40);
+		A1_6_1_1.add(A1_2_1_1_5_1_1);
+		
+		JLabel lblRegistrationNo_1_5_1_1 = new JLabel("Time Table");
+		lblRegistrationNo_1_5_1_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblRegistrationNo_1_5_1_1.setForeground(Color.WHITE);
+		lblRegistrationNo_1_5_1_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblRegistrationNo_1_5_1_1.setBounds(0, 0, 175, 40);
+		A1_2_1_1_5_1_1.add(lblRegistrationNo_1_5_1_1);
+		
+		JLabel lblClubRole_5_1_1 = new JLabel("Club Role");
+		lblClubRole_5_1_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblClubRole_5_1_1.setForeground(Color.DARK_GRAY);
+		lblClubRole_5_1_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblClubRole_5_1_1.setBounds(316, 8, 207, 40);
+		A1_6_1_1.add(lblClubRole_5_1_1);
+		GroupLayout gl_MemberInfo_1 = new GroupLayout(MemberInfo_1);
+		gl_MemberInfo_1.setHorizontalGroup(
+			gl_MemberInfo_1.createParallelGroup(Alignment.LEADING)
+				.addGap(0, 1015, Short.MAX_VALUE)
+				.addGap(0, 1015, Short.MAX_VALUE)
+				.addGap(0, 1015, Short.MAX_VALUE)
+				.addGroup(gl_MemberInfo_1.createSequentialGroup()
+					.addGap(10)
+					.addGroup(gl_MemberInfo_1.createParallelGroup(Alignment.LEADING)
+						.addComponent(panel_4_2_1_2, GroupLayout.PREFERRED_SIZE, 995, GroupLayout.PREFERRED_SIZE)
+						.addComponent(A1_8, GroupLayout.PREFERRED_SIZE, 950, GroupLayout.PREFERRED_SIZE)
+						.addComponent(A1_1_3, GroupLayout.PREFERRED_SIZE, 950, GroupLayout.PREFERRED_SIZE)
+						.addComponent(A1_3_3, GroupLayout.PREFERRED_SIZE, 950, GroupLayout.PREFERRED_SIZE)
+						.addComponent(A1_4_3, GroupLayout.PREFERRED_SIZE, 950, GroupLayout.PREFERRED_SIZE)
+						.addComponent(A1_5_1, GroupLayout.PREFERRED_SIZE, 950, GroupLayout.PREFERRED_SIZE)
+						.addComponent(A1_6_1, GroupLayout.PREFERRED_SIZE, 950, GroupLayout.PREFERRED_SIZE)
+						.addComponent(A1_6_1_1, GroupLayout.PREFERRED_SIZE, 950, GroupLayout.PREFERRED_SIZE)))
+		);
+		gl_MemberInfo_1.setVerticalGroup(
+			gl_MemberInfo_1.createParallelGroup(Alignment.LEADING)
+				.addGap(0, 1283, Short.MAX_VALUE)
+				.addGap(0, 1283, Short.MAX_VALUE)
+				.addGap(0, 1283, Short.MAX_VALUE)
+				.addGroup(gl_MemberInfo_1.createSequentialGroup()
+					.addGap(27)
+					.addComponent(panel_4_2_1_2, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE)
+					.addGap(28)
+					.addComponent(A1_8, GroupLayout.PREFERRED_SIZE, 56, GroupLayout.PREFERRED_SIZE)
+					.addGap(18)
+					.addComponent(A1_1_3, GroupLayout.PREFERRED_SIZE, 56, GroupLayout.PREFERRED_SIZE)
+					.addGap(18)
+					.addComponent(A1_3_3, GroupLayout.PREFERRED_SIZE, 56, GroupLayout.PREFERRED_SIZE)
+					.addGap(18)
+					.addComponent(A1_4_3, GroupLayout.PREFERRED_SIZE, 56, GroupLayout.PREFERRED_SIZE)
+					.addGap(18)
+					.addComponent(A1_5_1, GroupLayout.PREFERRED_SIZE, 56, GroupLayout.PREFERRED_SIZE)
+					.addGap(18)
+					.addComponent(A1_6_1, GroupLayout.PREFERRED_SIZE, 56, GroupLayout.PREFERRED_SIZE)
+					.addGap(10)
+					.addComponent(A1_6_1_1, GroupLayout.PREFERRED_SIZE, 56, GroupLayout.PREFERRED_SIZE))
+		);
+		MemberInfo_1.setLayout(gl_MemberInfo_1);
+		
 		
 		RoundPanel Upcoming = new RoundPanel();
 		Upcoming.setLayout(null);
@@ -532,6 +1910,15 @@ public class MainProject extends JFrame {
 		btnNewButton_1_2.setBackground(Color.GRAY);
 		btnNewButton_1_2.setFocusPainted(false);
 		btnNewButton_1_2.setBounds(10, 355, 171, 43);
+		btnNewButton_1_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				layeredPane.removeAll();
+				layeredPane.add(MembInfo);
+				layeredPane.repaint();
+				layeredPane.revalidate();
+			}
+		});
 		panel_1.add(btnNewButton_1_2);
 		
 		
@@ -581,9 +1968,19 @@ public class MainProject extends JFrame {
 		
 		JPanel panel_4 = new RoundPanel();
 		panel_4.setBackground(Color.WHITE);
-		panel_4.setBounds(25, 178, 1015, 57);
+		panel_4.setBounds(35, 178, 1015, 57);
 		contentPane.add(panel_4);
 		panel_4.setLayout(null);
+		
+		CircleButton btnNewButton_next = new CircleButton("-->");
+		btnNewButton_next.setSelected(true);
+		btnNewButton_next.setForeground(Color.WHITE);
+		btnNewButton_next.setFont(new Font("Cambria", Font.BOLD, 17));
+		btnNewButton_next.setFocusPainted(false);
+		btnNewButton_next.setBorder(null);
+		btnNewButton_next.setBackground(Color.GRAY);
+		btnNewButton_next.setBounds(930, 10, 36, 32);
+		panel_4.add(btnNewButton_next);
 		
 		JButton btnNewButton_4_0 = new RoundButton1("New button");
 		btnNewButton_4_0.setBorder(null);
